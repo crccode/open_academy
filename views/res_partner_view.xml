@@ -1,0 +1,16 @@
+<!-- improved idea categories list -->
+<odoo>
+    <record id="view_res_partner_form" model="ir.ui.view">
+        <field name="name">view.res.partner.form</field>
+        <field name="model">res.partner</field>
+    <!--    Heredamos la vista contactos formulario-->
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+    <!--        Buscamos la ruta del campo para que se muestre el campo de nosotros-->
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="academy_id" string="Curso"/>
+                <field name="academies_ids" string="Curso" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -24,8 +24,27 @@
                     <group>
                         <group>
                             <field name="name"/>
+                            <field name="partner_id" string="Teacher"/>
                         </group>
                     </group>
+                    <notebook>
+                        <page string="Estudiantes">
+                            <field name="partner_ids" nolabels="1" readonly="True">
+                                <tree string="Student">
+                                    <field name="name"/>
+                                    <field name="street"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Estudiantes">
+                            <field name="partners_ids" nolabels="1">
+                                <tree string="Student">
+                                    <field name="name"/>
+                                    <field name="street"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
 
             </form>
