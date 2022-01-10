@@ -1,0 +1,43 @@
+<odoo>
+
+        <record model="ir.ui.view" id="view_open_academy_list">
+          <field name="name">open.academy.list</field>
+          <field name="model">open.academy</field>
+          <field name="priority" eval="16"/>
+          <field name="arch" type="xml">
+            <tree string="List">
+              <field name="name"/>
+            </tree>
+          </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_open_academy_form">
+          <field name="name">open.academy.form</field>
+          <field name="model">open.academy</field>
+          <field name="priority" eval="16"/>
+          <field name="arch" type="xml">
+            <form string="Form">
+                <header>
+
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+
+            </form>
+          </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_open_academy">
+            <field name="name">Academy</field>
+            <field name="res_model">open.academy</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!--        <menuitem id="menu_ideas" parent="menu_root" name="Ideas" sequence="10"-->
+<!--                  action="action_list_ideas"/>-->
+
+</odoo>
